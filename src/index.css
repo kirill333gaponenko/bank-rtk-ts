@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-cinzel: 'Cinzel Decorative', serif;
+    --background-image-bank: url('https://vignette.wikia.nocookie.net/gameofthrones/images/e/e2/Iron_Bank_History_%26_Lore_01.png');
+}
+
+@layer base {
+    body {
+        @apply font-cinzel bg-bank bg-cover bg-center bg-no-repeat;
+    }
+}
