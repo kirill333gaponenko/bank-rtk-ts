@@ -1,9 +1,8 @@
-import {putQuote} from "../quote/quoteSlice.ts";
 import type {AppDispatch} from "../../app/store.ts";
-
+import {putQuote} from "../quote/quoteSlice.ts";
 
 export const fetchQuote = () => {
-    return (dispatch:AppDispatch) => {
+    return (dispatch: AppDispatch) => {
         dispatch(putQuote('Pending...'));
         fetch('https://api.gameofthronesquotes.xyz/v1/random')
             .then(response => response.json())
@@ -14,3 +13,6 @@ export const fetchQuote = () => {
             });
     }
 }
+
+
+
