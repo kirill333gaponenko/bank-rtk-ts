@@ -1,13 +1,15 @@
 import type {RootState} from "../app/store.ts";
 import {useAppSelector} from "../app/hooks.ts";
 import Bank from "./Bank.tsx";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 
 const Balance = () => {
     const balance = useAppSelector<RootState, number>(state => state.balance);
     const quote = useAppSelector<RootState, string>(state => state.quote);
 
-    const info = {name:'Braavos'}
+    const [info] = useState({name:'Braavos'})
+
+    // const info = {name:'Braavos'}
 
     // const {current:info} = useRef({name:'Braavos'})
 
