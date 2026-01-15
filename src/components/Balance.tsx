@@ -7,7 +7,7 @@ const Balance = () => {
     const balance = useAppSelector<RootState, number>(state => state.balance);
     const quote = useAppSelector<RootState, string>(state => state.quote);
 
-    const [info] = useState({name:'Braavos'})
+    // const [info] = useState({name:'Braavos'})
 
     // const info = {name:'Braavos'}
 
