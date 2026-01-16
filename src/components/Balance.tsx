@@ -1,17 +1,20 @@
 import type {RootState} from "../app/store.ts";
 import {useAppSelector} from "../app/hooks.ts";
 import Bank from "./Bank.tsx";
-import {useRef, useState} from "react";
+import {useMemo} from "react";
+import {getRandomIndex, names} from "../utils/constants.ts";
 
 const Balance = () => {
     const balance = useAppSelector<RootState, number>(state => state.balance);
     const quote = useAppSelector<RootState, string>(state => state.quote);
+    const index = getRandomIndex(names.length);
+    const info =useMemo(() => ({name:names[index]}),[index]);
 
     // const [info] = useState({name:'Braavos'})
 
     // const info = {name:'Braavos'}
 
-    // const {current:info} = useRef({name:'Braavos'})
+    // const info = useRef({name:'Braavos'})
 
     console.log(`Render Balance `)
     return (
